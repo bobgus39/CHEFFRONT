@@ -26,4 +26,9 @@ export const addMenuItem = (data) => api.post('/admin/menu', data)
 export const updateMenuItem = (id, data) => api.put(`/admin/menu/${id}`, data)
 export const deleteMenuItem = (id) => api.delete(`/admin/menu/${id}`)
 
+export const getAdminGallery = () => api.get('/admin/gallery')
+export const uploadGalleryImage = (formData) =>
+  api.post('/admin/gallery', formData, { headers: { 'Content-Type': 'multipart/form-data' } })
+export const deleteGalleryImage = (id) => api.delete(`/admin/gallery/${id}`)
+
 export default api

@@ -75,15 +75,11 @@ export default function Services() {
             </div>
           ))}
         </div>
-        <Button
-          as={Link}
-          to="/booking"
-          size="lg"
-          className="mt-10"
-          style={{ backgroundColor: GOLD, color: '#0A0A0A', fontWeight: 700 }}
-        >
-          {t('services.cta')}
-        </Button>
+        <Link to="/booking" className="mt-10 inline-block">
+          <Button size="lg" style={{ backgroundColor: GOLD, color: '#0A0A0A', fontWeight: 700 }}>
+            {t('services.cta')}
+          </Button>
+        </Link>
       </div>
     </div>
   )
