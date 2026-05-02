@@ -1,0 +1,111 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "The Chef",
+    "services": "Services",
+    "menu": "Menu",
+    "terpenes": "Terpenes",
+    "gallery": "Gallery",
+    "booking": "Book",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero_title": "Fine Dining, Privately",
+    "hero_subtitle": "Unique gastronomic experiences infused with the finest terpenes from Caliterpenes",
+    "hero_cta": "Book an Experience",
+    "hero_cta_secondary": "Learn More",
+    "terpenes_title": "The Art of Terpenes",
+    "terpenes_subtitle": "Every dish is an aromatic symphony crafted with premium Caliterpenes terpenes",
+    "services_teaser_title": "Exclusive Services",
+    "services_teaser_subtitle": "We bring the luxury restaurant experience to your space"
+  },
+  "about": {
+    "title": "The Chef",
+    "subtitle": "Specialist in Terpene-Infused Gastronomy",
+    "bio_p1": "With over 15 years of experience in fine dining, I specialize in using natural terpenes to elevate each dish into a complete sensory experience.",
+    "bio_p2": "My exclusive collaboration with Caliterpenes gives me access to the purest terpenes on the market, integrating them into recipes that surprise both the palate and the nose.",
+    "philosophy_title": "My Philosophy",
+    "philosophy_text": "Cooking is chemistry, art and emotion. Terpenes are the aromatic compounds that give identity to plants: limonene from lemon, linalool from lavender, myrcene from hops. Using them consciously in cooking opens unexplored dimensions of flavor.",
+    "caliterpenes_title": "Partnership with Caliterpenes",
+    "caliterpenes_text": "I work exclusively with food-grade terpenes from Caliterpenes, the European reference in premium terpenes. Every product passes purity and food safety controls."
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "Tailored experiences for special occasions",
+    "private_dinner": "Private Dinner",
+    "private_dinner_desc": "An exclusive evening in your home with a 7-course tasting menu designed with personalized terpene profiles.",
+    "events": "Events & Celebrations",
+    "events_desc": "Birthdays, anniversaries, corporate dinners. We create unique themed menus for every occasion.",
+    "catering": "Premium Catering",
+    "catering_desc": "Full catering service for groups up to 50 people featuring our terpene specialties.",
+    "classes": "Cooking Classes",
+    "classes_desc": "Learn to incorporate terpenes into your everyday cooking with private or small group classes.",
+    "cta": "Request a Quote"
+  },
+  "menu": {
+    "title": "Menu",
+    "subtitle": "Dishes crafted with unique terpene profiles",
+    "filter_all": "All",
+    "filter_starters": "Starters",
+    "filter_mains": "Mains",
+    "filter_desserts": "Desserts",
+    "terpene_profile": "Terpene Profile",
+    "price": "Price",
+    "inquire": "Inquire"
+  },
+  "terpenes": {
+    "title": "Terpenes",
+    "subtitle": "Natural aromatic compounds that transform the culinary experience",
+    "aroma": "Aroma",
+    "benefits": "Culinary Benefits",
+    "limonene_name": "Limonene",
+    "limonene_desc": "The quintessential citrus terpene, found in lemon and orange peel. Adds freshness, vibrancy and bright acidic notes to dishes.",
+    "limonene_aroma": "Citrus, fresh, lemon",
+    "limonene_benefits": "Enhances sauces, ceviches and citrus desserts. Boosts the perception of acidity without adding real acidity.",
+    "myrcene_name": "Myrcene",
+    "myrcene_desc": "The most abundant terpene in hops and cannabis. Earthy, herbal and slightly fruity, it gives depth to stews and meats.",
+    "myrcene_aroma": "Earthy, herbal, mango",
+    "myrcene_benefits": "Perfect for meat marinades, slow stews and dark sauces.",
+    "linalool_name": "Linalool",
+    "linalool_desc": "The floral aroma of lavender. Surprisingly versatile in cooking, adding elegance and softness.",
+    "linalool_aroma": "Floral, lavender, sweet",
+    "linalool_benefits": "Ideal for desserts, creams, sorbets and cocktails. Pairs with chocolate and berries.",
+    "caryophyllene_name": "Beta-Caryophyllene",
+    "caryophyllene_desc": "Spicy and peppery, like black pepper. The only terpene that activates cannabinoid receptors without psychoactive effects.",
+    "caryophyllene_aroma": "Spicy, pepper, woody",
+    "caryophyllene_benefits": "Enhances meat dishes, curries and spiced sauces. Adds warmth and depth."
+  },
+  "gallery": {
+    "title": "Gallery",
+    "subtitle": "BISTROCALI moments and creations"
+  },
+  "booking": {
+    "title": "Book an Experience",
+    "subtitle": "Tell us your occasion and we'll design something unique for you",
+    "name": "Full name",
+    "email": "Email address",
+    "phone": "Phone",
+    "date": "Desired date",
+    "time": "Preferred time",
+    "guests": "Number of guests",
+    "service": "Service type",
+    "message": "Tell us about your occasion",
+    "submit": "Send Request",
+    "success": "Request sent! We'll be in touch within 24-48h.",
+    "error": "Error sending. Please try again."
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "We're available to answer your questions",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Send Message",
+    "success": "Message sent successfully.",
+    "follow": "Follow us"
+  },
+  "footer": {
+    "tagline": "Private chef with premium Caliterpenes terpenes",
+    "rights": "All rights reserved"
+  }
+}

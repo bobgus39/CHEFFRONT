@@ -1,0 +1,20 @@
+@import "@heroui/styles";
+
+:root {
+  --bistro-black: #0A0A0A;
+  --bistro-gold: #C9A84C;
+  --bistro-green: #4A7C59;
+  --bistro-cream: #F5F5F0;
+}
+
+html, body {
+  background-color: var(--bistro-black);
+  color: var(--bistro-cream);
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+#root {
+  min-height: 100vh;
+}

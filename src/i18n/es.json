@@ -1,0 +1,111 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "El Chef",
+    "services": "Servicios",
+    "menu": "Menú",
+    "terpenes": "Terpenos",
+    "gallery": "Galería",
+    "booking": "Reservar",
+    "contact": "Contacto"
+  },
+  "home": {
+    "hero_title": "Cocina de Alta Gama",
+    "hero_subtitle": "Experiencias gastronómicas únicas infusionadas con los mejores terpenos de Caliterpenes",
+    "hero_cta": "Reservar Experiencia",
+    "hero_cta_secondary": "Conocer Más",
+    "terpenes_title": "El Arte de los Terpenos",
+    "terpenes_subtitle": "Cada plato es una sinfonía aromática creada con terpenos premium de Caliterpenes",
+    "services_teaser_title": "Servicios Exclusivos",
+    "services_teaser_subtitle": "Llevamos la experiencia de restaurante de lujo a tu espacio"
+  },
+  "about": {
+    "title": "El Chef",
+    "subtitle": "Especialista en Gastronomía con Terpenos",
+    "bio_p1": "Con más de 15 años de experiencia en alta cocina, me especializo en el uso de terpenos naturales para elevar cada plato a una experiencia sensorial completa.",
+    "bio_p2": "Mi colaboración exclusiva con Caliterpenes me permite acceder a los terpenos más puros del mercado, integrándolos en recetas que sorprenden tanto al paladar como al olfato.",
+    "philosophy_title": "Mi Filosofía",
+    "philosophy_text": "La cocina es química, arte y emoción. Los terpenos son los compuestos aromáticos que dan identidad a las plantas: el limoneno del limón, el linalool de la lavanda, el mirceno del lúpulo. Usarlos conscientemente en cocina abre dimensiones de sabor inexploradas.",
+    "caliterpenes_title": "Asociación con Caliterpenes",
+    "caliterpenes_text": "Trabajo exclusivamente con terpenos de grado alimentario de Caliterpenes, la referencia europea en terpenos premium. Cada producto pasa controles de pureza y seguridad alimentaria."
+  },
+  "services": {
+    "title": "Servicios",
+    "subtitle": "Experiencias a medida para ocasiones especiales",
+    "private_dinner": "Cena Privada",
+    "private_dinner_desc": "Una noche exclusiva en tu hogar con un menú degustación de 7 tiempos diseñado con perfiles de terpenos personalizados.",
+    "events": "Eventos y Celebraciones",
+    "events_desc": "Cumpleaños, aniversarios, cenas de empresa. Creamos menús temáticos únicos para cada ocasión.",
+    "catering": "Catering Premium",
+    "catering_desc": "Servicio completo de catering para grupos de hasta 50 personas con nuestras especialidades terpénicas.",
+    "classes": "Clases de Cocina",
+    "classes_desc": "Aprende a incorporar terpenos en tu cocina diaria con clases privadas o en pequeños grupos.",
+    "cta": "Solicitar Presupuesto"
+  },
+  "menu": {
+    "title": "Carta",
+    "subtitle": "Platos creados con perfiles de terpenos únicos",
+    "filter_all": "Todos",
+    "filter_starters": "Entrantes",
+    "filter_mains": "Principales",
+    "filter_desserts": "Postres",
+    "terpene_profile": "Perfil Terpénico",
+    "price": "Precio",
+    "inquire": "Consultar"
+  },
+  "terpenes": {
+    "title": "Los Terpenos",
+    "subtitle": "Compuestos aromáticos naturales que transforman la experiencia culinaria",
+    "aroma": "Aroma",
+    "benefits": "Beneficios en Cocina",
+    "limonene_name": "Limoneno",
+    "limonene_desc": "El terpeno cítrico por excelencia, presente en la cáscara de limón y naranja. Aporta frescura, vivacidad y notas ácidas brillantes a los platos.",
+    "limonene_aroma": "Cítrico, fresco, limón",
+    "limonene_benefits": "Realza salsas, ceviches y postres cítricos. Potencia la percepción de acidez sin añadir acidez real.",
+    "myrcene_name": "Mirceno",
+    "myrcene_desc": "El terpeno más abundante en el lúpulo y el cannabis. Terroso, herbal y levemente frutal, da profundidad a guisos y carnes.",
+    "myrcene_aroma": "Terroso, herbal, mango",
+    "myrcene_benefits": "Perfecto para marinadas de carne, guisos lentos y salsas oscuras.",
+    "linalool_name": "Linalool",
+    "linalool_desc": "El aroma floral de la lavanda. Sorprendentemente versátil en cocina, aporta elegancia y suavidad.",
+    "linalool_aroma": "Floral, lavanda, dulce",
+    "linalool_benefits": "Ideal para postres, cremas, sorbetes y cócteles. Combina con chocolate y frutas del bosque.",
+    "caryophyllene_name": "Beta-Cariofileno",
+    "caryophyllene_desc": "Picante y especiado, como la pimienta negra. El único terpeno que activa receptores cannabinoides sin efectos psicoactivos.",
+    "caryophyllene_aroma": "Picante, pimienta, especiado",
+    "caryophyllene_benefits": "Realza platos de carne, curries y salsas especiadas. Aporta calor y profundidad."
+  },
+  "gallery": {
+    "title": "Galería",
+    "subtitle": "Momentos y creaciones de BISTROCALI"
+  },
+  "booking": {
+    "title": "Reservar Experiencia",
+    "subtitle": "Cuéntanos tu ocasión y diseñaremos algo único para ti",
+    "name": "Nombre completo",
+    "email": "Correo electrónico",
+    "phone": "Teléfono",
+    "date": "Fecha deseada",
+    "time": "Hora preferida",
+    "guests": "Número de comensales",
+    "service": "Tipo de servicio",
+    "message": "Cuéntanos tu ocasión",
+    "submit": "Enviar Solicitud",
+    "success": "¡Solicitud enviada! Nos pondremos en contacto en 24-48h.",
+    "error": "Error al enviar. Por favor, inténtalo de nuevo."
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "Estamos disponibles para resolver tus dudas",
+    "name": "Nombre",
+    "email": "Email",
+    "message": "Mensaje",
+    "submit": "Enviar Mensaje",
+    "success": "Mensaje enviado correctamente.",
+    "follow": "Síguenos"
+  },
+  "footer": {
+    "tagline": "Cocina privada con terpenos premium de Caliterpenes",
+    "rights": "Todos los derechos reservados"
+  }
+}
