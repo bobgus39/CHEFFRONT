@@ -1,8 +1,11 @@
 import axios from 'axios'
 
-const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || '/api',
-})
+const rawUrl = import.meta.env.VITE_API_URL || '/api'
+const baseURL = rawUrl.endsWith('/api') || rawUrl.endsWith('/api/')
+  ? rawUrl
+  : rawUrl.replace(/\/?$/, '/api')
+
+const api = axios.create({ baseURL })
 
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem('bistrocali_token')
