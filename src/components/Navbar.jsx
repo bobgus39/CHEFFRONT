@@ -50,14 +50,11 @@ export default function Navbar() {
 
         <div className="hidden md:flex items-center gap-3">
           <LanguageSwitcher />
-          <Button
-            as={Link}
-            to="/booking"
-            size="sm"
-            style={{ backgroundColor: GOLD, color: '#0A0A0A', fontWeight: 700 }}
-          >
-            {t('nav.booking')}
-          </Button>
+          <Link to="/booking">
+            <Button size="sm" style={{ backgroundColor: GOLD, color: '#0A0A0A', fontWeight: 700 }}>
+              {t('nav.booking')}
+            </Button>
+          </Link>
         </div>
 
         {/* Mobile hamburger */}
@@ -88,15 +85,11 @@ export default function Navbar() {
           ))}
           <div className="flex gap-3 mt-2">
             <LanguageSwitcher />
-            <Button
-              as={Link}
-              to="/booking"
-              size="sm"
-              onPress={() => setMenuOpen(false)}
-              style={{ backgroundColor: GOLD, color: '#0A0A0A', fontWeight: 700 }}
-            >
-              {t('nav.booking')}
-            </Button>
+            <Link to="/booking" onClick={() => setMenuOpen(false)}>
+              <Button size="sm" style={{ backgroundColor: GOLD, color: '#0A0A0A', fontWeight: 700 }}>
+                {t('nav.booking')}
+              </Button>
+            </Link>
           </div>
         </div>
       )}

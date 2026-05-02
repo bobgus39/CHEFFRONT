@@ -27,9 +27,7 @@ export default function Home() {
       {/* Hero */}
       <section
         className="relative min-h-screen flex flex-col items-center justify-center text-center px-4"
-        style={{
-          background: 'linear-gradient(135deg, #0A0A0A 0%, #0D1A0F 50%, #0A0A0A 100%)',
-        }}
+        style={{ background: 'linear-gradient(135deg, #0A0A0A 0%, #0D1A0F 50%, #0A0A0A 100%)' }}
       >
         <div
           className="absolute inset-0 opacity-10"
@@ -41,35 +39,27 @@ export default function Home() {
           <p className="text-xs tracking-[0.4em] mb-4 opacity-60" style={{ color: GREEN }}>
             BISTROCALI × CALITERPENES
           </p>
-          <h1
-            className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
-            style={{ color: '#F5F5F0' }}
-          >
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight" style={{ color: '#F5F5F0' }}>
             {t('home.hero_title').split(' ').map((word, i) =>
-              i % 2 === 0 ? <span key={i}>{word} </span> : <span key={i} style={{ color: GOLD }}>{word} </span>
+              i % 2 === 0
+                ? <span key={i}>{word} </span>
+                : <span key={i} style={{ color: GOLD }}>{word} </span>
             )}
           </h1>
           <p className="text-lg md:text-xl mb-10 opacity-70 max-w-2xl mx-auto leading-relaxed">
             {t('home.hero_subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              as={Link}
-              to="/booking"
-              size="lg"
-              style={{ backgroundColor: GOLD, color: '#0A0A0A', fontWeight: 700, paddingInline: 32 }}
-            >
-              {t('home.hero_cta')}
-            </Button>
-            <Button
-              as={Link}
-              to="/about"
-              size="lg"
-              variant="bordered"
-              style={{ borderColor: GREEN, color: GREEN }}
-            >
-              {t('home.hero_cta_secondary')}
-            </Button>
+            <Link to="/booking">
+              <Button size="lg" style={{ backgroundColor: GOLD, color: '#0A0A0A', fontWeight: 700, paddingInline: 32 }}>
+                {t('home.hero_cta')}
+              </Button>
+            </Link>
+            <Link to="/about">
+              <Button size="lg" variant="bordered" style={{ borderColor: GREEN, color: GREEN }}>
+                {t('home.hero_cta_secondary')}
+              </Button>
+            </Link>
           </div>
         </div>
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-40 animate-bounce">
@@ -90,30 +80,30 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {terpeneHighlights.map(({ key, color, emoji }) => (
-            <Card
-              key={key}
-              isPressable
-              as={Link}
-              to="/terpenes"
-              className="border transition-transform hover:-translate-y-1"
-              style={{ backgroundColor: '#111', borderColor: `${color}33` }}
-            >
-              <CardContent className="p-6 text-center">
-                <div className="text-4xl mb-3">{emoji}</div>
-                <h3 className="font-bold text-lg mb-1" style={{ color }}>
-                  {t(`terpenes.${key}_name`)}
-                </h3>
-                <p className="text-xs opacity-60 leading-relaxed">
-                  {t(`terpenes.${key}_aroma`)}
-                </p>
-              </CardContent>
-            </Card>
+            <Link key={key} to="/terpenes">
+              <Card
+                className="border transition-transform hover:-translate-y-1 cursor-pointer h-full"
+                style={{ backgroundColor: '#111', borderColor: `${color}33` }}
+              >
+                <CardContent className="p-6 text-center">
+                  <div className="text-4xl mb-3">{emoji}</div>
+                  <h3 className="font-bold text-lg mb-1" style={{ color }}>
+                    {t(`terpenes.${key}_name`)}
+                  </h3>
+                  <p className="text-xs opacity-60 leading-relaxed">
+                    {t(`terpenes.${key}_aroma`)}
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
           ))}
         </div>
         <div className="text-center mt-8">
-          <Button as={Link} to="/terpenes" variant="bordered" style={{ borderColor: GOLD, color: GOLD }}>
-            {t('nav.terpenes')} →
-          </Button>
+          <Link to="/terpenes">
+            <Button variant="bordered" style={{ borderColor: GOLD, color: GOLD }}>
+              {t('nav.terpenes')} →
+            </Button>
+          </Link>
         </div>
       </section>
 
@@ -132,11 +122,7 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {serviceHighlights.map(({ icon, key }) => (
-            <Card
-              key={key}
-              className="border"
-              style={{ backgroundColor: '#0D1A0F', borderColor: `${GREEN}33` }}
-            >
+            <Card key={key} className="border" style={{ backgroundColor: '#0D1A0F', borderColor: `${GREEN}33` }}>
               <CardContent className="p-6 text-center">
                 <div className="text-3xl mb-3">{icon}</div>
                 <h3 className="font-semibold mb-2" style={{ color: GOLD }}>
@@ -150,9 +136,11 @@ export default function Home() {
           ))}
         </div>
         <div className="text-center mt-8">
-          <Button as={Link} to="/services" variant="bordered" style={{ borderColor: GREEN, color: GREEN }}>
-            {t('nav.services')} →
-          </Button>
+          <Link to="/services">
+            <Button variant="bordered" style={{ borderColor: GREEN, color: GREEN }}>
+              {t('nav.services')} →
+            </Button>
+          </Link>
         </div>
       </section>
 
@@ -167,14 +155,11 @@ export default function Home() {
         <p className="opacity-60 mb-8 max-w-xl mx-auto">
           Cada evento es irrepetible. Diseñamos una experiencia culinaria personalizada para ti.
         </p>
-        <Button
-          as={Link}
-          to="/booking"
-          size="lg"
-          style={{ backgroundColor: GOLD, color: '#0A0A0A', fontWeight: 700, paddingInline: 40 }}
-        >
-          {t('nav.booking')}
-        </Button>
+        <Link to="/booking">
+          <Button size="lg" style={{ backgroundColor: GOLD, color: '#0A0A0A', fontWeight: 700, paddingInline: 40 }}>
+            {t('nav.booking')}
+          </Button>
+        </Link>
       </section>
     </div>
   )
