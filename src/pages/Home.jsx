@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { Button, Card, CardContent } from '@heroui/react'
-
+import icon from '../../public/favicon.svg'
 const GOLD = '#C9A84C'
 const GREEN = '#4A7C59'
 
@@ -26,7 +26,7 @@ export default function Home() {
     <div>
       {/* Hero */}
       <section
-        className="relative min-h-screen flex flex-col items-center justify-center text-center px-4"
+        className="relative min-h-screen flex flex-col items-center justify-center text-center px-4 overflow-hidden"
         style={{ background: 'linear-gradient(135deg, #0A0A0A 0%, #0D1A0F 50%, #0A0A0A 100%)' }}
       >
         <div
@@ -35,6 +35,7 @@ export default function Home() {
             backgroundImage: `radial-gradient(circle at 30% 40%, ${GOLD} 0%, transparent 50%), radial-gradient(circle at 70% 60%, ${GREEN} 0%, transparent 50%)`,
           }}
         />
+        <img className="absolute h-[185%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5" src={icon} alt="icon" />
         <div className="relative z-10 max-w-4xl">
           <p className="text-xs tracking-[0.4em] mb-4 opacity-60" style={{ color: GREEN }}>
             BISTROCALI × CALITERPENES
