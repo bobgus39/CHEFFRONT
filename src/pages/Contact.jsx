@@ -80,7 +80,7 @@ export default function Contact() {
         <div className="flex flex-col gap-6 justify-center">
           <div>
             <h3 className="font-semibold mb-2" style={{ color: GOLD }}>Email</h3>
-            <p className="opacity-70 text-sm">hola@bistrocali.com</p>
+            <p className="opacity-70 text-sm">inaneproduct@proton.me</p>
           </div>
           <div>
             <h3 className="font-semibold mb-2" style={{ color: GOLD }}>{t('contact.follow')}</h3>

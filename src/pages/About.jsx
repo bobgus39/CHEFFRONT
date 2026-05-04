@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { Card, CardContent, Separator } from '@heroui/react'
-
+import chefImage from '../assets/ZI_00008_.png' 
 const GOLD = '#C9A84C'
 const GREEN = '#4A7C59'
 
@@ -19,12 +19,14 @@ export default function About() {
 
       {/* Chef profile */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
+        
         <div
           className="aspect-[3/4] rounded-2xl flex items-center justify-center text-8xl"
           style={{ background: `linear-gradient(135deg, #0D1A0F, ${GREEN}22)`, border: `1px solid ${GREEN}33` }}
         >
-          👨‍🍳
+          <img src={chefImage} alt="Chef" className="relative w-full h-full object-cover rounded-2xl" />
         </div>
+        
         <div>
           <p className="text-base opacity-80 leading-relaxed mb-6">{t('about.bio_p1')}</p>
           <p className="text-base opacity-80 leading-relaxed">{t('about.bio_p2')}</p>
