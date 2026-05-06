@@ -57,24 +57,15 @@ export default function Gallery() {
         <motion.p variants={fadeUp} transition={{ duration: 0.6 }} className="opacity-60 text-lg">{t('gallery.subtitle')}</motion.p>
       </motion.div>
 
-      <motion.div
-        className="columns-2 md:columns-3 gap-4 space-y-4"
-        variants={stagger}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.1 }}
-      >
+      <div className="columns-2 md:columns-3 gap-4 space-y-4">
         {items.map((item, idx) => {
           const color = COLORS[idx % COLORS.length]
           const title = lang === 'en' ? (item.title_en || '') : (item.title_es || '')
           return (
-            <motion.div
+            <div
               key={item.id}
-              variants={fadeUp}
-              transition={{ duration: 0.45 }}
               onClick={() => openItem(item, color)}
-              whileHover={{ scale: 1.02 }}
-              className="cursor-pointer rounded-xl overflow-hidden break-inside-avoid shadow-md"
+              className="cursor-pointer rounded-xl overflow-hidden break-inside-avoid shadow-md transition-transform hover:scale-[1.02]"
               style={{ border: `1px solid ${color}33` }}
             >
               {item.image_url ? (
@@ -91,10 +82,10 @@ export default function Gallery() {
                   <p className="text-xs opacity-60 text-center">{title}</p>
                 </div>
               )}
-            </motion.div>
+            </div>
           )
         })}
-      </motion.div>
+      </div>
 
       <ModalRoot open={isOpen} onOpenChange={setIsOpen}>
         <ModalBackdrop />

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { Card, CardContent, Button } from '@heroui/react'
 import { motion } from 'framer-motion'
@@ -23,6 +23,7 @@ const steps = [
 
 export default function Services() {
   const { t } = useTranslation()
+  const navigate = useNavigate()
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-20">
@@ -97,13 +98,11 @@ export default function Services() {
           whileInView="show"
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-10 inline-block"
+          className="mt-10"
         >
-          <Link to="/booking">
-            <Button size="lg" style={{ backgroundColor: GOLD, color: '#0A0A0A', fontWeight: 700 }}>
-              {t('services.cta')}
-            </Button>
-          </Link>
+          <Button size="lg" onPress={() => navigate('/booking')} style={{ backgroundColor: GOLD, color: '#0A0A0A', fontWeight: 700 }}>
+            {t('services.cta')}
+          </Button>
         </motion.div>
       </motion.div>
     </div>

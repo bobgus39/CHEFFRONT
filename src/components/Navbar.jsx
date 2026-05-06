@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { Button } from '@heroui/react'
 import LanguageSwitcher from './LanguageSwitcher'
@@ -22,6 +22,7 @@ export default function Navbar() {
     { href: '/contact', label: t('nav.contact') },
   ]
 
+  const navigate = useNavigate()
   const isActive = (href) => location.pathname === href
 
   return (
@@ -50,11 +51,9 @@ export default function Navbar() {
 
         <div className="hidden md:flex items-center gap-3">
           <LanguageSwitcher />
-          <Link to="/booking">
-            <Button size="sm" style={{ backgroundColor: GOLD, color: '#0A0A0A', fontWeight: 700 }}>
-              {t('nav.booking')}
-            </Button>
-          </Link>
+          <Button size="sm" onPress={() => navigate('/booking')} style={{ backgroundColor: GOLD, color: '#0A0A0A', fontWeight: 700 }}>
+            {t('nav.booking')}
+          </Button>
         </div>
 
         {/* Mobile hamburger */}
@@ -85,11 +84,9 @@ export default function Navbar() {
           ))}
           <div className="flex gap-3 mt-2">
             <LanguageSwitcher />
-            <Link to="/booking" onClick={() => setMenuOpen(false)}>
-              <Button size="sm" style={{ backgroundColor: GOLD, color: '#0A0A0A', fontWeight: 700 }}>
-                {t('nav.booking')}
-              </Button>
-            </Link>
+            <Button size="sm" onPress={() => { navigate('/booking'); setMenuOpen(false) }} style={{ backgroundColor: GOLD, color: '#0A0A0A', fontWeight: 700 }}>
+              {t('nav.booking')}
+            </Button>
           </div>
         </div>
       )}

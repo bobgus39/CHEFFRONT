@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { Button, Card, CardContent } from '@heroui/react'
 import { motion } from 'framer-motion'
@@ -26,6 +26,7 @@ const serviceHighlights = [
 
 export default function Home() {
   const { t } = useTranslation()
+  const navigate = useNavigate()
 
   return (
     <div>
@@ -61,16 +62,12 @@ export default function Home() {
             {t('home.hero_subtitle')}
           </motion.p>
           <motion.div variants={fadeUp} transition={{ duration: 0.6 }} className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/booking">
-              <Button size="lg" style={{ backgroundColor: GOLD, color: '#0A0A0A', fontWeight: 700, paddingInline: 32 }}>
-                {t('home.hero_cta')}
-              </Button>
-            </Link>
-            <Link to="/about">
-              <Button size="lg" variant="bordered" style={{ borderColor: GREEN, color: GREEN }}>
-                {t('home.hero_cta_secondary')}
-              </Button>
-            </Link>
+            <Button size="lg" onPress={() => navigate('/booking')} style={{ backgroundColor: GOLD, color: '#0A0A0A', fontWeight: 700, paddingInline: 32 }}>
+              {t('home.hero_cta')}
+            </Button>
+            <Button size="lg" variant="bordered" onPress={() => navigate('/about')} style={{ borderColor: GREEN, color: GREEN }}>
+              {t('home.hero_cta_secondary')}
+            </Button>
           </motion.div>
         </motion.div>
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-40 animate-bounce">
@@ -132,11 +129,9 @@ export default function Home() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <Link to="/terpenes">
-            <Button variant="bordered" style={{ borderColor: GOLD, color: GOLD }}>
-              {t('nav.terpenes')} →
-            </Button>
-          </Link>
+          <Button variant="bordered" onPress={() => navigate('/terpenes')} style={{ borderColor: GOLD, color: GOLD }}>
+            {t('nav.terpenes')} →
+          </Button>
         </motion.div>
       </section>
 
@@ -191,11 +186,9 @@ export default function Home() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <Link to="/services">
-            <Button variant="bordered" style={{ borderColor: GREEN, color: GREEN }}>
-              {t('nav.services')} →
-            </Button>
-          </Link>
+          <Button variant="bordered" onPress={() => navigate('/services')} style={{ borderColor: GREEN, color: GREEN }}>
+            {t('nav.services')} →
+          </Button>
         </motion.div>
       </section>
 
@@ -215,11 +208,9 @@ export default function Home() {
           Cada evento es irrepetible. Diseñamos una experiencia culinaria personalizada para ti.
         </motion.p>
         <motion.div variants={fadeUp} transition={{ duration: 0.6 }}>
-          <Link to="/booking">
-            <Button size="lg" style={{ backgroundColor: GOLD, color: '#0A0A0A', fontWeight: 700, paddingInline: 40 }}>
-              {t('nav.booking')}
-            </Button>
-          </Link>
+          <Button size="lg" onPress={() => navigate('/booking')} style={{ backgroundColor: GOLD, color: '#0A0A0A', fontWeight: 700, paddingInline: 40 }}>
+            {t('nav.booking')}
+          </Button>
         </motion.div>
       </motion.section>
     </div>
