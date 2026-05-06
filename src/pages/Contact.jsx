@@ -1,10 +1,15 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Button } from '@heroui/react'
+import { motion } from 'framer-motion'
 import { sendContact } from '../services/api'
 
 const GOLD = '#C9A84C'
 const GREEN = '#4A7C59'
+const fadeUp  = { hidden: { opacity: 0, y: 40 }, show: { opacity: 1, y: 0 } }
+const slideL  = { hidden: { opacity: 0, x: -50 }, show: { opacity: 1, x: 0 } }
+const slideR  = { hidden: { opacity: 0, x: 50 },  show: { opacity: 1, x: 0 } }
+const stagger = { show: { transition: { staggerChildren: 0.14 } } }
 
 export default function Contact() {
   const { t } = useTranslation()
@@ -33,25 +38,33 @@ export default function Contact() {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-20">
-      <div className="text-center mb-12">
-        <p className="text-xs tracking-[0.3em] mb-3 opacity-50" style={{ color: GREEN }}>BISTROCALI</p>
-        <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: '#F5F5F0' }}>
+      <motion.div className="text-center mb-12" variants={stagger} initial="hidden" animate="show">
+        <motion.p variants={fadeUp} transition={{ duration: 0.5 }} className="text-xs tracking-[0.3em] mb-3 opacity-50" style={{ color: GREEN }}>BISTROCALI</motion.p>
+        <motion.h1 variants={fadeUp} transition={{ duration: 0.6 }} className="text-4xl md:text-5xl font-bold mb-4" style={{ color: '#F5F5F0' }}>
           {t('contact.title')}
-        </h1>
-        <p className="opacity-60 text-lg">{t('contact.subtitle')}</p>
-      </div>
+        </motion.h1>
+        <motion.p variants={fadeUp} transition={{ duration: 0.6 }} className="opacity-60 text-lg">{t('contact.subtitle')}</motion.p>
+      </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-        <div
+        <motion.div
           className="rounded-2xl p-8 border"
           style={{ backgroundColor: '#0D1A0F', borderColor: `${GREEN}33` }}
+          variants={slideL}
+          initial="hidden"
+          animate="show"
+          transition={{ duration: 0.65, delay: 0.2 }}
         >
           {status === 'success' && (
-            <div className="rounded-xl p-4 mb-6 text-center text-sm font-medium" style={{ backgroundColor: `${GREEN}20`, border: `1px solid ${GREEN}44`, color: GREEN }}>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="rounded-xl p-4 mb-6 text-center text-sm font-medium"
+              style={{ backgroundColor: `${GREEN}20`, border: `1px solid ${GREEN}44`, color: GREEN }}
+            >
               ✓ {t('contact.success')}
-            </div>
+            </motion.div>
           )}
-
           <form onSubmit={handleSubmit} className="flex flex-col gap-5">
             <div className="flex flex-col gap-1">
               <label className="text-xs opacity-60">{t('contact.name')}</label>
@@ -65,24 +78,24 @@ export default function Contact() {
               <label className="text-xs opacity-60">{t('contact.message')}</label>
               <textarea rows={4} className={inputClass} style={inputStyle} value={form.message} onChange={set('message')} required />
             </div>
-            <Button
-              type="submit"
-              size="lg"
-              isLoading={loading}
-              className="w-full font-bold"
-              style={{ backgroundColor: GOLD, color: '#0A0A0A' }}
-            >
+            <Button type="submit" size="lg" isLoading={loading} className="w-full font-bold" style={{ backgroundColor: GOLD, color: '#0A0A0A' }}>
               {t('contact.submit')}
             </Button>
           </form>
-        </div>
+        </motion.div>
 
-        <div className="flex flex-col gap-6 justify-center">
-          <div>
+        <motion.div
+          className="flex flex-col gap-6 justify-center"
+          variants={slideR}
+          initial="hidden"
+          animate="show"
+          transition={{ duration: 0.65, delay: 0.3 }}
+        >
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.45, duration: 0.5 }}>
             <h3 className="font-semibold mb-2" style={{ color: GOLD }}>Email</h3>
             <p className="opacity-70 text-sm">inaneproduct@proton.me</p>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.55, duration: 0.5 }}>
             <h3 className="font-semibold mb-2" style={{ color: GOLD }}>{t('contact.follow')}</h3>
             <div className="flex flex-col gap-2">
               <a href="https://instagram.com" target="_blank" rel="noreferrer" className="text-sm transition-opacity hover:opacity-100 opacity-70" style={{ color: '#F5F5F0' }}>
@@ -92,13 +105,19 @@ export default function Contact() {
                 🌿 Caliterpenes.com
               </a>
             </div>
-          </div>
-          <div className="rounded-xl p-5" style={{ backgroundColor: `${GOLD}10`, border: `1px solid ${GOLD}33` }}>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.65, duration: 0.5 }}
+            className="rounded-xl p-5"
+            style={{ backgroundColor: `${GOLD}10`, border: `1px solid ${GOLD}33` }}
+          >
             <p className="text-xs opacity-70 leading-relaxed italic">
               "Cada experiencia empieza con una conversación. Cuéntanos tu historia y crearemos algo único para ti."
             </p>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   )

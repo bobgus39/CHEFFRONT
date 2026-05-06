@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Input, Button } from '@heroui/react'
+import { motion } from 'framer-motion'
 import { adminLogin } from '../../services/api'
 
 const GOLD = '#C9A84C'
@@ -30,26 +31,41 @@ export default function AdminLogin() {
   }
 
   return (
-    <div
-      className="min-h-screen flex items-center justify-center px-4"
-      style={{ backgroundColor: '#0A0A0A' }}
-    >
-      <div
+    <div className="min-h-screen flex items-center justify-center px-4" style={{ backgroundColor: '#0A0A0A' }}>
+      <motion.div
         className="w-full max-w-sm rounded-2xl p-8 border"
         style={{ backgroundColor: '#0D1A0F', borderColor: `${GREEN}33` }}
+        initial={{ opacity: 0, y: 40, scale: 0.97 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{ duration: 0.55 }}
       >
-        <div className="text-center mb-8">
+        <motion.div
+          className="text-center mb-8"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+        >
           <h1 className="text-xl font-bold tracking-widest" style={{ color: GOLD }}>BISTROCALI</h1>
           <p className="text-xs opacity-50 mt-1">Panel de Administración</p>
-        </div>
+        </motion.div>
 
         {error && (
-          <div className="rounded-xl p-3 mb-5 text-center text-sm bg-red-900/20 border border-red-500/30 text-red-400">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="rounded-xl p-3 mb-5 text-center text-sm bg-red-900/20 border border-red-500/30 text-red-400"
+          >
             {error}
-          </div>
+          </motion.div>
         )}
 
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+        <motion.form
+          onSubmit={handleSubmit}
+          className="flex flex-col gap-4"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.5 }}
+        >
           <Input
             label="Email"
             type="email"
@@ -75,8 +91,8 @@ export default function AdminLogin() {
           >
             Entrar
           </Button>
-        </form>
-      </div>
+        </motion.form>
+      </motion.div>
     </div>
   )
 }
