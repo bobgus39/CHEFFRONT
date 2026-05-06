@@ -78,7 +78,7 @@ export default function Gallery() {
               style={{ border: `1px solid ${color}33` }}
             >
               {item.image_url ? (
-                <img src={item.image_url} alt={title} className="w-full h-full object-cover" />
+                <img src={item.image_url} alt={title} className="w-full block" />
               ) : (
                 <div
                   className="flex flex-col items-center justify-center gap-2 p-8"
@@ -111,7 +111,7 @@ export default function Gallery() {
             </ModalCloseTrigger>
             <ModalBody className="p-8 text-center">
               {selected?.image_url ? (
-                <img src={selected.image_url} alt="" className="w-full rounded-xl mb-4" />
+                <img src={selected.image_url} alt="" className="w-full block rounded-xl mb-4" />
               ) : (
                 <div className="text-8xl mb-4">{selected?.emoji || '📷'}</div>
               )}
